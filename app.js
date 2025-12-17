@@ -45,12 +45,14 @@ const posts = [
         title: "Post-4",
         content: "Miao Corporation: azieda esclusiva per chi usa solo BootStrap e non matteoStrap. Nata il giorno: 404 Error (esiste da sempre : D)",
         tags: ["local", "host", "matteoStrap", "react è morto", "npm install david", "node ./miao-main.Loris"]
-
+        
     },
 ]
 
 
 app.get("/bacheca", (req, res) => {
+   const tag = req.query.tag
+   console.log(tag);
    
    res.json(posts)
 })
